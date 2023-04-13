@@ -1,0 +1,29 @@
+:root {
+    --box-unit: 100px;
+    --main-color: #290000;
+}
+
+.hover-text{
+    transition: all .5s;
+    transition-timing-function:cubic-bezier(.62,.15,.4,.9)  ;
+}
+
+.hover-text:hover{
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.box{
+    position: fixed;
+    height: var(--box-unit);
+    width: var(--box-unit);
+    background: red;
+    border: 1px solid black;
+    animation: size-down  cubic-bezier(1,0,1,1) 0.5s 4 alternate both;
+
+}
+
+
+@keyframes size-down {
+    to {transform: scale(0.3); background: var(--main-color);}
+}
